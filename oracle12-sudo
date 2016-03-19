@@ -1,0 +1,4 @@
+%dba ALL=NOPASSWD: /bin/systemctl start oracle12.service
+%dba ALL=NOPASSWD: /bin/systemctl stop oracle12.service
+%dba ALL=NOPASSWD: /bin/systemctl restart oracle12.service
+%dba ALL=NOPASSWD: /bin/systemctl status oracle12.service

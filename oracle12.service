@@ -1,0 +1,14 @@
+[Unit]
+Description=The Oracle 12 Database Service
+After=syslog.target network.target
+
+[Service]
+Type=simple
+RemainAfterExit=yes
+User=oracle
+Group=oinstall
+ExecStart=/home/oracle/oracle12-start.sh
+ExecStop=/home/oracle/oracle12-stop.sh
+
+[Install]
+WantedBy=multi-user.target
