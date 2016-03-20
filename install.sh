@@ -135,5 +135,8 @@ sudo -u oracle /home/oracle/app/oracle/product/12.1.0/dbhome_1/cfgtoollogs/confi
 rm -f "/home/oracle/db.rsp"
 rm -f "/home/oracle/cfgrsp.properties"
 
-echo "TURBORACLE: Starting Oracle 12..."
+echo "TURBORACLE: Resetting service state..."
 systemctl start oracle12.service
+systemctl stop oracle12.service
+
+echo "TURBORACLE: Installation finished. Please reboot."
