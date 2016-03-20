@@ -50,6 +50,9 @@ EOF
 echo "TURBORACLE: Modifying global Bash profile for Oracle usage..."
 update_profile "/etc/skel/.bash_profile"
 
+echo "TURBORACLE: Installing Oracle 12 preinstall RPM..."
+yum -y install oracle-rdbms-server-12cR1-preinstall
+
 echo "TURBORACLE: Please enter non-root username to be used for DB management..."
 read -p 'Regular User: ' UNAME
 while [ ! -d "/home/${UNAME}" ]
@@ -59,9 +62,6 @@ do
 done
 update_profile "/home/${UNAME}/.bash_profile"
 usermod -a -G dba ${UNAME}
-
-echo "TURBORACLE: Installing Oracle 12 preinstall RPM..."
-yum -y install oracle-rdbms-server-12cR1-preinstall
 
 echo "TURBORACLE: Generating response file based on hostname..."
 HNAME_LONG=$(hostname)
