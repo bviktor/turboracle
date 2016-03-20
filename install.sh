@@ -119,7 +119,7 @@ firewall-cmd --reload
 echo "TURBORACLE: Granting access to Oracle binaries..."
 chmod 755 /home/oracle
 
-echo "TURBORACLE: Unzipping Oracle installer files..."
+echo "TURBORACLE: Extracting Oracle installer files..."
 unzip -q /root/linuxamd64_12102_database_1of2.zip -d /home/oracle
 unzip -q /root/linuxamd64_12102_database_2of2.zip -d /home/oracle
 restorecon -rv /home/oracle/database
