@@ -100,7 +100,7 @@ chown oracle.dba "/var/log/oracle12"
 chmod 0640 "/var/log/oracle12"
 
 echo "TURBORACLE: Addig sudo rules..."
-cp "oracle12-sudo" "/etc/sudoers.d/"
+cp "${ROOT_DIR}/oracle12-sudo" "/etc/sudoers.d/"
 restorecon -v "/etc/sudoers.d/oracle12-sudo"
 chmod 0440 "/etc/sudoers.d/oracle12-sudo"
 
