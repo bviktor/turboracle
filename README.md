@@ -1,5 +1,7 @@
 # turboracle
 
+Fully automated script to install **Oracle Database 12.1.0.2.0 Enterprise** on **Oracle Linux 7.2** with almost zero effort. Other releases are not supported. 
+
 ## Prerequisites
 
 ### Programs
@@ -11,7 +13,6 @@
 
 ### Files
 
-Download:
 - [Oracle Linux 7.2 Boot ISO](https://edelivery.oracle.com/linux)
 - [Oracle Database 12c Release 1 Enterprise](http://www.oracle.com/technetwork/database/enterprise-edition/downloads/index.html)
 
