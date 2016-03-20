@@ -1,28 +1,59 @@
 # turboracle
 
-1. Install:
-  1.1. Hyper-V / VirtualBox / VMware
-  1.2. FileZilla
-  1.3. PuTTY
+## Prerequisites
 
-2. Download:
-  2.1. Oracle Linux boot ISO
-  2.2. Oracle Enterprise zips (2)
-  2.3. Oracle SQL Developer
+### Programs
 
-3. Linux
-  3.1. Set up FQDN
-  3.2. Install repo: public-yum.oracle.com/repo/OracleLinux/OL7/latest/x86_64
-  3.3. Reboot
+- [Microsoft Hyper-V](https://msdn.microsoft.com/en-us/virtualization/hyperv_on_windows/quick_start/walkthrough_install) / [Oracle VM VirtualBox](https://www.virtualbox.org/wiki/Downloads) / [VMware Workstation Player](https://www.vmware.com/go/downloadplayer)
+- [FileZilla](https://filezilla-project.org/download.php?type=client)
+- [PuTTY](https://blog.splunk.net/64bit-putty/)
+- [Oracle SQL Developer](http://www.oracle.com/technetwork/developer-tools/sql-developer/downloads/index.html)
+- 
+### Files
 
-4. Copy installer with FileZilla
+Download:
+- [Oracle Linux 7 Boot ISO](https://edelivery.oracle.com/linux)
+- [Oracle Database 12c Release 1 Enterprise](http://www.oracle.com/technetwork/database/enterprise-edition/downloads/index.html)
 
-5. yum install git
+## Oracle Linux
 
-6. git clone https://github.com/bviktor/turboracle.git
+- Set up FQDN properly
+- Set up install repo: `public-yum.oracle.com/repo/OracleLinux/OL7/latest/x86_64`
+- Use `Minimal` install
+- Upload the two Oracle Database installer ZIPs to `/root` with FileZilla.
 
-7. install.sh
+## Installation
 
-8. https://oracle.foobar.lan:5500/em/
+~~~
+sudo -i
+yum install git
+git clone https://github.com/bviktor/turboracle.git
+/root/turboracle/install.sh
+~~~
 
-9. As DBA: sudo /bin/systemctl start oracle12.service
+## Usage
+
+The web UI is available at
+
+~~~
+https://oracle.foobar.lan:5500/em/
+~~~
+
+For SQL Developer access:
+
+- Username: `sys`
+- Password: the one you enter during Oracle Database install
+- Connection type: `Basic`
+- Role: `SYSDBA`
+- Hostname: the FQDN of the host
+- Port: `1521`
+- SID: `orcl`
+
+To control the service, add the user to the `dba` group:
+
+~~~
+sudo /bin/systemctl status oracle12.service
+sudo /bin/systemctl start oracle12.service
+sudo /bin/systemctl stop oracle12.service
+sudo /bin/systemctl restart oracle12.service
+~~~
