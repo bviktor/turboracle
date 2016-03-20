@@ -4,7 +4,7 @@ Fully automated script to install **Oracle Database 12.1.0.2.0 Enterprise** on *
 
 ## Prerequisites
 
-### Programs
+### Utilities
 
 - [Microsoft Hyper-V](https://msdn.microsoft.com/en-us/virtualization/hyperv_on_windows/quick_start/walkthrough_install) / [Oracle VM VirtualBox](https://www.virtualbox.org/wiki/Downloads) / [VMware Workstation Player](https://www.vmware.com/go/downloadplayer)
 - [FileZilla](https://filezilla-project.org/download.php?type=client)
