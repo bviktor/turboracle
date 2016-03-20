@@ -12,7 +12,7 @@
 ### Files
 
 Download:
-- [Oracle Linux 7 Boot ISO](https://edelivery.oracle.com/linux)
+- [Oracle Linux 7.2 Boot ISO](https://edelivery.oracle.com/linux)
 - [Oracle Database 12c Release 1 Enterprise](http://www.oracle.com/technetwork/database/enterprise-edition/downloads/index.html)
 
 ## Oracle Linux
@@ -49,7 +49,7 @@ For SQL Developer access:
 - Port: `1521`
 - SID: `orcl`
 
-To control the service, add the user to the `dba` group:
+To control the service, add the user to the `dba` group, then:
 
 ~~~
 sudo /bin/systemctl status oracle12.service
@@ -57,3 +57,5 @@ sudo /bin/systemctl start oracle12.service
 sudo /bin/systemctl stop oracle12.service
 sudo /bin/systemctl restart oracle12.service
 ~~~
+
+Service logs are available at `/var/log/oracle12`.
