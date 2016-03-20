@@ -8,7 +8,7 @@
 - [FileZilla](https://filezilla-project.org/download.php?type=client)
 - [PuTTY](https://blog.splunk.net/64bit-putty/)
 - [Oracle SQL Developer](http://www.oracle.com/technetwork/developer-tools/sql-developer/downloads/index.html)
-- 
+
 ### Files
 
 Download:
