@@ -1,6 +1,6 @@
 # turboracle
 
-Fully automated script to install **Oracle Database 12.1.0.2.0 Enterprise** on **Oracle Linux 7.2** with almost zero effort. Other releases are not supported. 
+Fully automated script to install **Oracle Database 12.1.0.2.0 Enterprise** on **Oracle Linux 7.2** with zero effort. Other releases are not supported. 
 
 ## Prerequisites
 
@@ -27,14 +27,14 @@ Fully automated script to install **Oracle Database 12.1.0.2.0 Enterprise** on *
 
 ~~~
 sudo -i
-yum install git
+yum -y install git
 git clone https://github.com/bviktor/turboracle.git
 /root/turboracle/install.sh
 ~~~
 
 ## Usage
 
-The web UI is available at
+EM Database Express (the web interface) is available at:
 
 ~~~
 https://oracle.foobar.lan:5500/em/
